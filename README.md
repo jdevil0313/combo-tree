@@ -1,3 +1,6 @@
+# [ComboTree jQuery Plugin](https://github.com/erhanfirat/combo-tree) v 1.2.1
+ComboTree is a jQuery Plugin which is a combobox item within tree structured data list and multiple/single selection options and more. It has been developed to manage large amount of choices in a combobox and multi selection feature. 
+
 
 ## 옵션 확장 추가
 - **dependentSelect**: *{true/false} | default: false* | 하위 노드가 모두 체크 되어있을경우 (상위) 노드가 체크 되어있을 경우(cascadeSelect:true) 자식노드가 하나라도 체크 해제되면 부모노드도 체크해제 해주는 옵션
@@ -14,30 +17,26 @@
 ```
 
 ```javascript
-    var comboTree = $('#comboTree').comboTree({
-        source : SampleJSONData,
-        isMultiple: true,
-        cascadeSelect: true,
-        dependentSelect: true,
-        collapse: true,
-        isTitle: true, //확장
-        title: '타이틀제목', //확장
-        clickHandler: function(callback) { //확장
-            //callback은 json형태로 반환된다.
-      		//source에서 jsonData로 만들어진 내용이 들어간다.
-            //체크상태에 따라 checked: Y|N 값이 반환된다.
-        },
-        selected: checkedList
-    });
+var comboTree = $('#comboTree').comboTree({
+    source : SampleJSONData,
+    isMultiple: true,
+    cascadeSelect: true,
+    dependentSelect: true,
+    collapse: true,
+    isTitle: true, //확장
+    title: '타이틀제목', //확장
+    clickHandler: function(callback) { //확장
+        //callback은 json형태로 반환된다.
+        //source에서 jsonData로 만들어진 내용이 들어간다.
+        //체크상태에 따라 checked: Y|N 값이 반환된다.
+    },
+    selected: checkedList
+});
 ```
 
 ## 1.2.1 Updates
 - Filter is fixed & updated.
 - icontains.js dependency is deprecated. 
-
-# ComboTree jQuery Plugin v 1.2.1
-ComboTree is a jQuery Plugin which is a combobox item within tree structured data list and multiple/single selection options and more. It has been developed to manage large amount of choices in a combobox and multi selection feature. 
-
 
 ## Features:
 - Tree structured data list in combobox dropdown menu
@@ -151,9 +150,3 @@ Three parameter are needed: id, title and subs.
             title: 'Fish'
         }
     ];
-
-
-
-## You can donate to support me
-
-https://www.blockchain.com/btc/address/15c5AxBVgNxkwaHSTBZMiCV5PL41DKe88v
