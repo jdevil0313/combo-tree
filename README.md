@@ -1,4 +1,36 @@
 
+## 옵션 확장 추가
+- **dependentSelect**: *{true/false} | default: false* | 하위 노드가 모두 체크 되어있을경우 (상위) 노드가 체크 되어있을 경우(cascadeSelect:true) 자식노드가 하나라도 체크 해제되면 부모노드도 체크해제 해주는 옵션
+- **isTitle**: *{true/false} | default: false* | 타이틀 사용 유무
+- **title**: *{String} | default: null* | 타이틀을 사용할 경우 타이틀 내용
+- **clickHandler: function(target) {}**: *{function()} | 노드를 클릭시 콜백 되는 메서드
+
+
+## 사용법
+- 아래 기본 사용법에서 확장 옵션을 추가한 사용방법
+
+```html
+<input type="text" name="layerType" id="layerType" readonly="readonly" placeholder="combobox" autocomplete="off"/>
+```
+
+```javascript
+    var comboTree = $('#comboTree').comboTree({
+        source : SampleJSONData,
+        isMultiple: true,
+        cascadeSelect: true,
+        dependentSelect: true,
+        collapse: true,
+        isTitle: true, //확장
+        title: '타이틀제목', //확장
+        clickHandler: function(callback) { //확장
+            //callback은 json형태로 반환된다.
+      		//source에서 jsonData로 만들어진 내용이 들어간다.
+            //체크상태에 따라 checked: Y|N 값이 반환된다.
+        },
+        selected: checkedList
+    });
+```
+
 ## 1.2.1 Updates
 - Filter is fixed & updated.
 - icontains.js dependency is deprecated. 
