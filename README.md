@@ -1,6 +1,7 @@
 # [ComboTree jQuery Plugin](https://github.com/erhanfirat/combo-tree) v 1.2.1
 ComboTree is a jQuery Plugin which is a combobox item within tree structured data list and multiple/single selection options and more. It has been developed to manage large amount of choices in a combobox and multi selection feature. 
 
+### [원본플러그인 데모 사이트](https://www.jqueryscript.net/demo/Drop-Down-Combo-Tree/)
 
 ## 옵션 확장 추가
 - **dependentSelect**: *{true/false} | default: false* | 하위 노드가 모두 체크 되어있을경우 (상위) 노드가 체크 되어있을 경우(cascadeSelect:true) 자식노드가 하나라도 체크 해제되면 부모노드도 체크해제 해주는 옵션
